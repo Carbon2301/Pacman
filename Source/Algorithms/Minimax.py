@@ -5,9 +5,10 @@ _food_pos = []
 
 _food_pos = []
 
+def evaluationFunction(_map, pac_row, pac_col, N, M, score, visited=None):
+    if visited is None:
+        visited = set()
 
-def evaluationFunction(_map, pac_row, pac_col, N, M, score):
-    # get food position
     ghost_pos = []
     distancesToFoodList = []
     for row in range(N):
@@ -19,13 +20,16 @@ def evaluationFunction(_map, pac_row, pac_col, N, M, score):
             if _map[row][col] == EMPTY:
                 score += 5
 
-    # Consts
-    INF = 100000000.0  # Infinite value
-    WEIGHT_FOOD = 10.0  # Trọng số Food
-    WEIGHT_GHOST = -15.0  # Trọng số GHOST
+    # Penalize for visiting same cell
+    if (pac_row, pac_col) in visited:
+        score -= 20  # hoặc một giá trị phù hợp
+
+    INF = 1e9
+    WEIGHT_FOOD = 10.0
+    WEIGHT_GHOST = -15.0
 
     _score = score
-    if len(distancesToFoodList) > 0:
+    if distancesToFoodList:
         _score += WEIGHT_FOOD / (min(distancesToFoodList) if min(distancesToFoodList) != 0 else 1)
     else:
         _score += WEIGHT_FOOD
