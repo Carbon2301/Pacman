@@ -21,7 +21,7 @@ def evaluationFunction(_map, pac_row, pac_col, N, M, score):
 
     # Consts
     INF = 100000000.0  # Infinite value
-    WEIGHT_FOOD = 10.  # Trọng số Food
+    WEIGHT_FOOD = 10.0  # Trọng số Food
     WEIGHT_GHOST = -15.0  # Trọng số GHOST
 
     _score = score
