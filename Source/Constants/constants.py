@@ -39,7 +39,7 @@ MONSTER = 3
 # Setup screen
 WIDTH: int = 1200
 HEIGHT: int = 600
-FPS: int = 300
+FPS: int = 500
 
 MARGIN = {
     "TOP": 0,
