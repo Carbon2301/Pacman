@@ -21,8 +21,8 @@ def evaluationFunction(_map, pac_row, pac_col, N, M, score):
 
     # Consts
     INF = 100000000.0  # Infinite value
-    WEIGHT_FOOD = 100.0  # Trọng số Food
-    WEIGHT_GHOST = -150.0  # Trọng số GHOST
+    WEIGHT_FOOD = 10.  # Trọng số Food
+    WEIGHT_GHOST = -15.0  # Trọng số GHOST
 
     _score = score
     if len(distancesToFoodList) > 0:
@@ -88,7 +88,7 @@ def minimaxAgent(_map, pac_row, pac_col, N, M, depth, Score):
                 if _map[row][col] == MONSTER:
                     for [_d_r, _d_c] in moving:
                         _new_r, _new_c = _d_r + row, _d_c + col
-                        if isWall(_map, _new_r, _new_c, _N, _M):
+                        if isValid(_map, _new_r, _new_c, _N, _M):
                             state = _map[_new_r][_new_c]
                             _map[_new_r][_new_c] = MONSTER
                             _map[row][col] = EMPTY
@@ -132,3 +132,5 @@ def minimaxAgent(_map, pac_row, pac_col, N, M, depth, Score):
     if len(res) > 0:
         return res[-1][0]
     return []
+
+
