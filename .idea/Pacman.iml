@@ -4,18 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Source" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.13" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-  <component name="PyNamespacePackagesService">
-    <option name="namespacePackageFolders">
-      <list>
-        <option value="$MODULE_DIR$/Source/Algorithms" />
-        <option value="$MODULE_DIR$/Source/Constants" />
-        <option value="$MODULE_DIR$/Source/Images" />
-        <option value="$MODULE_DIR$/Source/Object" />
-        <option value="$MODULE_DIR$/Source/Utils" />
-      </list>
-    </option>
   </component>
 </module>
